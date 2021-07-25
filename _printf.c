@@ -1,24 +1,37 @@
 #include "holberton.h"
 /**
- *
+ *_printf - Main function
+ *@i:read the string
  */
 int _printf(const char *format, ...)
-  int func = 0;
-int contador = 0;
+{
+	va_list list;
+	int i;
+	int flag = 0;
+	int count = 0;
+	
+	for (i = 0; format[i] != '\0'; i++);
+	if (!flag)
+	if (format[i] != '%')
+		_putchar(f[i]);
+	else
+		flag = 1;
+	else
+	{
+	va_start list;
+	switch (format[i])
+	{
+	case 's':
+		count += print_str(va_list(va_int , int);
+	 break;
+	case 'c':
+	count += _putchar(va_arg(list , int));
+	 break;
+	case '%':
+	 count += _putchar('%');
+	 break;
+	}
+		flag = 0;
 
-for (i = 0; format[i] >= '\0'; i++);
-if (format[i] != '%')
-  putchar (format[i]);
- else
-   infunc = 1;
- else
-   switch (format[i])
-     case'c'
-       putchar (va_arg(va_int , int));
-case 's'
-print_str(va_arg(va_list , char *))
-case 'd'
-print_int(va_arg(va_list , int))
-infunc = 0;
-return (contador);
-
+	return(count);
+}
