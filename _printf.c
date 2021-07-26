@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 	if (format[i] != '%')
 	count+=	_putchar(format[i]);
 	else
-		flag = 1;
+	      flag = 1;
 	else
 	{
 	va_start list;
