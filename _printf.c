@@ -32,11 +32,11 @@ int _printf(const char *format, ...)
 						print_str(va_arg(list, char *));
 						break;
 					case 'c':
-						_putchar('h');
+						_putchar(va_arg(list, int));
 						break;
 
 					case '%':
-						_putchar('@');
+						_putchar('%');
 						break;
 					}
 			}
