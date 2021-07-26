@@ -3,40 +3,46 @@
 
 /**
  *_printf - Main function
- *@i:read the string
+ *@format: read the string
+ *Return: size of bytes of string of char<
  */
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i;
-	int count = 0;
-	if (format != NULL)
-	for (i = 0; format[i] != '\0'; i++);
-	if (format[i] != '%')
-	count+=	_putchar(format[i]);
-	else
-<<<<<<< HEAD
-	flag = 1;
-	if
-=======
-	      flag = 1;
-	else
->>>>>>> f8bc1ff82004900ae61b62358a8612e22e522e67
-	{
-	va_start (list , format);
-	switch (format[i])
-	{
-	case 's':
-	count += print_str(va_list(va_int , int);
-	 break;
-	case 'c':
-	count += _putchar(va_arg(list , int));
-	 break;
-	case '%':
-	 count += _putchar('%');
-	 break;
-	}
-	flag = 0;
+	int i, flag = 0;
 
-	return(count);
-	}
+	if (format)
+	{
+		va_start(list, format);
+		for (i = 0; format[i] != '\0'; i++)
+		{
+			if (!flag)
+			{
+				if (format[i] != '%')
+					_putchar(format[i]);
+				else
+					flag = 1;
+
+			}
+			else
+			{
+					switch (format[i])
+					{
+					case 's':
+						_putchar('t');
+						break;
+					case 'c':
+						_putchar('h');
+						break;
+
+					case '%':
+						_putchar('%');
+						break;
+					}
+			}
+		}
+va_end(list);
+
+return (i);
+}
+}

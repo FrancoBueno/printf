@@ -5,8 +5,8 @@
 #include <stdio.h>
 
 int _printf(const char *format, ...);
-int _strlen(char *s);
+int _strlen(char *);
 int _putchar(char c);
-int print_str(char *s);
+int print_str(char *);
 
 #endif
