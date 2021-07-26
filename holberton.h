@@ -1,5 +1,9 @@
 #ifndef _HOLBERTON_H
 #define _HOLBERTON_H
+#include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _putchar(char c);

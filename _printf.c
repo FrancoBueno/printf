@@ -15,8 +15,13 @@ int _printf(const char *format, ...)
 	if (format[i] != '%')
 	count+=	_putchar(format[i]);
 	else
+<<<<<<< HEAD
 	flag = 1;
 	if
+=======
+	      flag = 1;
+	else
+>>>>>>> f8bc1ff82004900ae61b62358a8612e22e522e67
 	{
 	va_start (list , format);
 	switch (format[i])
