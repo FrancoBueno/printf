@@ -9,8 +9,7 @@
 int _printf(const char *format, ...)
 {
 	va_list list;
-	int i, flag = 0;
-
+	int i, flag, count = 0;
 	if (format)
 	{
 		va_start(list, format);
@@ -19,7 +18,7 @@ int _printf(const char *format, ...)
 			if (!flag)
 			{
 				if (format[i] != '%')
-					_putchar(format[i]);
+				count+=	_putchar(format[i]);
 				else
 					flag = 1;
 
@@ -29,14 +28,14 @@ int _printf(const char *format, ...)
 					switch (format[i])
 					{
 					case 's':
-						print_str(va_arg(list, char *));
+					count += print_str(va_arg(list, char *));
 						break;
 					case 'c':
-						_putchar(va_arg(list, int));
+					count += _putchar(va_arg(list, int));
 						break;
 
 					case '%':
-						_putchar('%');
+					count += _putchar('%');
 						break;
 					}
 			}
@@ -44,5 +43,5 @@ int _printf(const char *format, ...)
 va_end(list);
 
 	}
-return (i);
+return (count);
 }
