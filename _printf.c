@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 					switch (format[i])
 					{
 					case 's':
-						_putchar('t');
+						print_str(va_arg(list, char *));
 						break;
 					case 'c':
 						_putchar('h');
