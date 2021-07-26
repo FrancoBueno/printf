@@ -1,10 +1,19 @@
 #include "holberton.h"
+
 /**
- *
+ * print_str- print to chain of characters.
+ * @s: pointer a printear
+ * Return: number of characters to print.
  */
-print_str(char *s)
-	int i;
-if (s)
-	for (i = 0; s[i]; i++)
-		_putchar(s[i]);
-return (i);
+int print_str(char *s)
+{
+	char *str;
+
+	str = s;
+	int contador;
+
+	if (str == NULL)
+	str = "(null)";
+
+	return (cont);
+}

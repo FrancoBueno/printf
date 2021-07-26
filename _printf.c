@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdarg.h>
+
 /**
  *_printf - Main function
  *@i:read the string
@@ -9,11 +11,12 @@ int _printf(const char *format, ...)
 	int i;
 	int flag = 0;
 	int count = 0;
-	
+
+	if (!format)
 	for (i = 0; format[i] != '\0'; i++);
 	if (!flag)
 	if (format[i] != '%')
-		_putchar(f[i]);
+	count+=	_putchar(format[i]);
 	else
 		flag = 1;
 	else
@@ -22,7 +25,7 @@ int _printf(const char *format, ...)
 	switch (format[i])
 	{
 	case 's':
-		count += print_str(va_list(va_int , int);
+	count += print_str(va_list(va_int , int);
 	 break;
 	case 'c':
 	count += _putchar(va_arg(list , int));
@@ -31,7 +34,8 @@ int _printf(const char *format, ...)
 	 count += _putchar('%');
 	 break;
 	}
-		flag = 0;
+		
+	flag = 0;
 
 	return(count);
-}
+	}
