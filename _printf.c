@@ -36,9 +36,13 @@ int _printf(const char *format, ...)
 						break;
 
 					case '%':
-					count += _putchar('%');
-						break;
+						count += _putchar('%');
+					break;
+					default:
+						count+=	_putchar('%');
+						count+=	_putchar(format[i]);
 					}
+
 			}
 		}
 va_end(list);
