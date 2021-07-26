@@ -8,6 +8,6 @@
  */
 int printf_buffer(char *buffer)
 {
-write (1, buffer, 1024);
+write(1, buffer, 1024);
 return (1024);
 }
