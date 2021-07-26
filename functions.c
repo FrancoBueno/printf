@@ -9,7 +9,8 @@
 int print_str(char *c)
 {
 	int i;
-
+	if (c = NULL)
+	c = NULL;
 	if (c)
 
 	{
