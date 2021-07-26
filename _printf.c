@@ -9,19 +9,16 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int i;
-	int flag = 0;
 	int count = 0;
-
-	if (!format)
+	if (format != NULL)
 	for (i = 0; format[i] != '\0'; i++);
-	if (!flag)
 	if (format[i] != '%')
 	count+=	_putchar(format[i]);
 	else
-		flag = 1;
-	else
+	flag = 1;
+	if
 	{
-	va_start list;
+	va_start (list , format);
 	switch (format[i])
 	{
 	case 's':
@@ -34,7 +31,6 @@ int _printf(const char *format, ...)
 	 count += _putchar('%');
 	 break;
 	}
-		
 	flag = 0;
 
 	return(count);
