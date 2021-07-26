@@ -49,6 +49,6 @@ va_end(list);
 		return (-1);
 	}
 
-return (i);
+return (count);
 
 }
