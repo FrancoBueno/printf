@@ -1,3 +1,4 @@
+#include <limits.h>
 #include "holberton.h"
 #include <stdarg.h>
 
@@ -18,7 +19,7 @@ int _printf(const char *format, ...)
 			if (!flag)
 			{
 				if (format[i] != '%')
-				count+=	_putchar(format[i]);
+				count += _putchar(format[i]);
 				else
 					flag = 1;
 
@@ -43,5 +44,11 @@ int _printf(const char *format, ...)
 va_end(list);
 
 	}
-return (count);
+	else
+	{
+		return (-1);
+	}
+
+return (i);
+
 }
