@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 						break;
 
 					case '%':
-						_putchar('%');
+						_putchar('@');
 						break;
 					}
 			}

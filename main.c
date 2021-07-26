@@ -5,6 +5,6 @@
  */
 int main(void)
 {
-	_printf("holerro%s%%%%cjola\n");
+	_printf("holerro%s%%%%cjola");
 	return (0);
 }
