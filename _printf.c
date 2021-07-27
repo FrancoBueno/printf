@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 {
 	va_list list;
 	int i, flag, count = 0;
+
 	if (format)
 	{
 		va_start(list, format);
@@ -21,7 +22,6 @@ int _printf(const char *format, ...)
 				count += _putchar(format[i]);
 				else
 					flag = 1;
-
 			}
 			else
 			{
@@ -38,19 +38,16 @@ int _printf(const char *format, ...)
 						count += _putchar('%');
 					break;
 					default:
-						count+=	_putchar(format[i]);
+						count += _putchar(format[i]);
 					}
 
 			}
 		}
-va_end(list);
-
+		va_end(list);
 	}
 	else
 	{
 		return (-1);
 	}
-
 return (count);
-
 }
