@@ -35,8 +35,8 @@ int print_str(char *c)
 int print_numbers(long int n)
 
 {
-	int b = n;
-	int f = 0;
+	long int b = n;
+	long int f = 0;
 	{
 		if (n < 0)
 		{

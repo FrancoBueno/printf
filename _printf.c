@@ -42,10 +42,10 @@ int _printf(const char *format, ...)
 					cont += _putchar('%');
 					break;
 				case 'd':
-					cont += print_numbers(va_arg(lista, long int));
+					cont += print_numbers(va_arg(lista, int));
 					break;
 				case 'i':
-					cont += print_numbers(va_arg(lista, long int));
+					cont += print_numbers(va_arg(lista, int));
 					break;
 				case '\0':
 				case ' ':
