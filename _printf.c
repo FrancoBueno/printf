@@ -42,6 +42,7 @@ int _printf(const char *format, ...)
 					cont += print_int(va_arg(lista, int));
 					break;
 				case '\0':
+				case ' ':
 					return (-1);
 				default:
 					cont += _putchar('%');
@@ -53,7 +54,8 @@ int _printf(const char *format, ...)
 		va_end(lista);
 	}
 	else
-	{return (-1);
+	{
+		return (-1);
 	}
 	return (cont);
 }
