@@ -1,60 +1,59 @@
 #include "holberton.h"
 #include <stdarg.h>
 /**
- * _printf - prints text to screen, redirects num of bytes to stdout
- * @format: character string
- * Return: int, num of bytes
+ * _printf - Print in screen text
+ * @format: string of characters
+ * Return: num of bytes
  */
 int _printf(const char *format, ...)
-{
-	va_list vl;
-	int i = 0, count = 0, flag = 0;
+{	va_list lista;
+	int i = 0, cont = 0, flag = 0;
 
 	if (format)
 	{
-		va_start(vl, format);
+		va_start(lista, format);
+		if (lista == NULL)
+		return (-1);
 		for (; format[i] != '\0'; i++)
 		{
 			if (!flag)
 			{
 				if (format[i] != '%')
-					count += _putchar(format[i]);
+					cont += _putchar(format[i]);
 				else
-					flag = 1;
-			}
+					flag = 1; }
 			else
 			{
 				switch (format[i])
 				{
 				case 'c':
-					count += _putchar(va_arg(vl, int));
+					cont += _putchar(va_arg(lista, int));
 					break;
 				case 's':
-					count += print_str(va_arg(vl, char *));
+					cont += print_str(va_arg(lista, char *));
 					break;
 				case '%':
-					count += _putchar('%');
+					cont += _putchar('%');
 					break;
 				case 'd':
-					count += print_int(va_arg(vl, int));
+					cont += print_int(va_arg(lista, int));
 					break;
 				case 'i':
-					count += print_int(va_arg(vl, int));
+					cont += print_int(va_arg(lista, int));
 					break;
 				case '\0':
 					return (-1);
 				default:
-					count += _putchar('%');
-					count += _putchar(format[i]);
+					cont += _putchar('%');
+					cont += _putchar(format[i]);
 				}
 				flag = 0;
 			}
 		}
-		va_end(vl);
+		va_end(lista);
 	}
 	else
-	{
-		return (-1);
+	{return (-1);
 	}
-	return (count);
+	return (cont);
 }
