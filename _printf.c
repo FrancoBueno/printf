@@ -57,6 +57,9 @@ int _printf(const char *format, ...)
 				case 'o':
 				  cont += print_oct(va_arg(lista, unsigned int));
 				  break;
+				case 'x':
+				  cont += print_hex(va_arg(lista, unsigned int));
+				  break;
 				default:
 					cont += _putchar('%');
 					cont += _putchar(format[i]);

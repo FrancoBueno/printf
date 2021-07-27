@@ -78,7 +78,6 @@ int print_unt(unsigned int num)
     }
   return (i);
 }
-#include "holberton.h"
 /**
  * print_oct - print octal format of decimal num
  * @num: int
@@ -95,6 +94,38 @@ int print_oct(unsigned int num)
 	{
 	  count += print_oct(num / 8);
 	  count += _putchar((num % 8) + '0');
+	}
+      else
+	{
+	  return (-1);
+	}
+    }
+  return (count);
+}
+#include "holberton.h"
+/**
+ * print_hex - print hex format of decimal num
+ * @num: int
+ *
+ * Return: number of bytes
+ */
+int print_hex(unsigned int num)
+{
+  int count = 0;
+
+  if (num)
+    {
+      if (num >= 1)
+	{
+	  count += print_hex(num / 16);
+	  if ((num % 16) > 9 && (num % 16) < 16)
+	    {
+	      count += _putchar((num % 16) + 55);
+	    }
+	  else
+	    {
+	      count += _putchar((num % 16) + '0');
+	    }
 	}
       else
 	{
