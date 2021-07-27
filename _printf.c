@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 					return (-1);
 					break;
 				case 'u':
-				  count += print_unt(va_arg(vl, unsigned int));
+				  cont += print_unt(va_arg(lista, unsigned int));
 				  break;
 				default:
 					cont += _putchar('%');
