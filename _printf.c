@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdarg.h>
-#define BUFFER_SIZE 1024;
+#define BUF_SIZE 1024
 /**
  * _printf - Print in screen text
  * @format: string of characters
