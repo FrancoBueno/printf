@@ -12,4 +12,5 @@ int _strlen(char *);
 int _putchar(char c);
 int print_str(char *c);
 int print_numbers(long int n);
+int print_unt(unsigned int num);
 #endif

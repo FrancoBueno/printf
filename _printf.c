@@ -51,6 +51,9 @@ int _printf(const char *format, ...)
 				case ' ':
 					return (-1);
 					break;
+				case 'u':
+				  count += print_unt(va_arg(vl, unsigned int));
+				  break;
 				default:
 					cont += _putchar('%');
 					cont += _putchar(format[i]);
