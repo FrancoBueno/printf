@@ -23,33 +23,36 @@ int print_str(char *c)
 		}
 	}
 	return (i);
-}
+
+
+		}
 /**
- *print_int - Entry point
- *Return: int, byte count
- *@num: integral to print
+ * print_numbers - Print to screen integrals
+ * @n: Number of integrals
+ * Return: return Integral
+ *
  */
-
-int print_int(int num)
+int print_numbers(int n)
 {
-	int c = num;
-	int f = 0;
+	int b = 0;
 
-	if (num)
 	{
-	if (num < 0)
-	{
-		f += _putchar('-');
-		c = -c;
+		if (n < 0)
+		{
+			_putchar('-');
+			b = (print_numbers(n * -1)) + 1;
+			return (0);
+		}
+		if (n < 10)
+		{
+			_putchar(n + '0');
+			return (1);
+		}
+		else
+		{
+			b = (print_numbers(n / 10)) + 1;
+			_putchar((n % 10) + '0');
+			return (b);
+		}
 	}
-	if ((c / 10) > 0)
-		f += print_int(c / 10);
-	f += _putchar((c % 10) + '0');
-	}
-else
-	{
-		f += _putchar(num + '0');
-	}
-
-return (f);
 }
