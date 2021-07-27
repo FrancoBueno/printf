@@ -7,8 +7,7 @@
  *Return: size of bytes of string of char<
  */
 int _printf(const char *format, ...)
-{
-	va_list list;
+{	va_list list;
 	int i, flag, count = 0;
 
 	if (format)
@@ -33,7 +32,6 @@ int _printf(const char *format, ...)
 					case 'c':
 					count += _putchar(va_arg(list, int));
 						break;
-
 					case '%':
 						count += _putchar('%');
 					break;
