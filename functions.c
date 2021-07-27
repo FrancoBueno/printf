@@ -32,7 +32,7 @@ int print_str(char *c)
  * Return: return Integral
  *
  */
-int print_numbers(int n)
+long int print_numbers(int n)
 
 {
 	int b = n;
