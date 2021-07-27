@@ -32,26 +32,26 @@ int print_str(char *c)
  * Return: return Integral
  *
  */
-int print_numbers(long int n)
+int print_numbers(long int num)
 
 {
-	long int b = n;
-	long int f = 0;
+	long int x = num;
+	int i = 0;
+
+	if (num)
 	{
-		if (n < 0)
+		if (num < 0)
 		{
-			f += _putchar('-');
-			b = -b;
+			i += _putchar('-');
+			x = -x;
 		}
-		if ((b / 10) > 0)
-		{
-			f += print_numbers(b / 10);
-			f += _putchar((n % 10) + '0');
-		}
-		else
-		{
-			f += _putchar (n + '0');
-		}
+		if ((x / 10) > 0)
+			i += print_numbers(x / 10);
+		i += _putchar((x % 10) + '0');
 	}
-	return (f);
+	else
+	{
+		i += _putchar(num + '0');
+	}
+	return (i);
 }
