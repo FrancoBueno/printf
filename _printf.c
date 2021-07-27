@@ -7,7 +7,8 @@
  * Return: num of bytes
  */
 int _printf(const char *format, ...)
-{	va_list lista;
+{
+	va_list lista;
 	int i = 0, cont = 0, flag = 0;
 
 	if (format)
@@ -45,10 +46,10 @@ int _printf(const char *format, ...)
 				case 'i':
 					cont += print_numbers(va_arg(lista, int));
 					break;
-				case '\0':
+					/*case '\0':
 				case ' ':
 					return (-1);
-					break;
+					break;*/
 				default:
 					cont += _putchar('%');
 					cont += _putchar(format[i]);
