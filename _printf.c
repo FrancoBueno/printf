@@ -16,8 +16,9 @@ int _printf(const char *format, ...)
 		va_start(lista, format);
 		if (lista == NULL)
 			return (-1);
-		if (format == NULL || (format[0] == '%' && format[i] == '\0'))
+		if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 				return (-1);
+
 		for (; format[i] != '\0'; i++)
 		{
 			if (!flag)
