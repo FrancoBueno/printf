@@ -33,26 +33,25 @@ int print_str(char *c)
  *
  */
 int print_numbers(int n)
-{
-	int b = 0;
 
+{
+	int b = n;
+	int f = 0;
 	{
 		if (n < 0)
 		{
-			_putchar('-');
-			b = (print_numbers(n * -1)) + 1;
-			return (0);
+			f += _putchar('-');
+			b = -b;
 		}
-		if (n < 10)
+		if ((b / 10) > 0)
 		{
-			_putchar(n + '0');
-			return (1);
+			f += print_numbers(b / 10);
+			f += _putchar((n % 10) + '0');
 		}
 		else
 		{
-			b = (print_numbers(n / 10)) + 1;
-			_putchar((n % 10) + '0');
-			return (b);
+			f += _putchar (n + '0');
 		}
 	}
+	return (f);
 }
