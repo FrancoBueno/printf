@@ -8,9 +8,12 @@
 
 int print_str(char *c)
 {
-	int i;
+	int i = 0;
+
 	if (c == NULL)
-	c = NULL;
+	{
+		c = ("null");
+	}
 	if (c)
 
 	{
@@ -20,4 +23,33 @@ int print_str(char *c)
 		}
 	}
 	return (i);
+}
+/**
+ *print_int - Entry point
+ *Return: int, byte count
+ *@num: integral to print
+ */
+
+int print_int(int num)
+{
+	int c = num;
+	int f = 0;
+
+	if (num)
+	{
+	if (num < 0)
+	{
+		f += _putchar('-');
+		c = -c;
+	}
+	if ((c / 10) > 0)
+		f += print_int(c / 10);
+	f += _putchar((c % 10) + '0');
+	}
+else
+	{
+		f += _putchar(num + '0');
+	}
+
+return (f);
 }

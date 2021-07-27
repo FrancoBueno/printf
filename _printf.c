@@ -1,7 +1,6 @@
 #include <limits.h>
 #include "holberton.h"
 #include <stdarg.h>
-
 /**
  *_printf - Main function
  *@format: read the string
@@ -16,7 +15,7 @@ int _printf(const char *format, ...)
 		va_start(list, format);
 		for (i = 0; format[i] != '\0'; i++)
 		{
-			if (!flag)
+			if (flag)
 			{
 				if (format[i] != '%')
 				count += _putchar(format[i]);
@@ -39,7 +38,6 @@ int _printf(const char *format, ...)
 						count += _putchar('%');
 					break;
 					default:
-						count+=	_putchar('%');
 						count+=	_putchar(format[i]);
 					}
 
