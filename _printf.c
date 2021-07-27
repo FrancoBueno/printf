@@ -1,51 +1,60 @@
-#include <limits.h>
 #include "holberton.h"
 #include <stdarg.h>
 /**
- *_printf - Main function
- *@format: read the string
- *Return: size of bytes of string of char<
+ * _printf - prints text to screen, redirects num of bytes to stdout
+ * @format: character string
+ * Return: int, num of bytes
  */
 int _printf(const char *format, ...)
-{	va_list list;
-	int i, flag, count = 0;
+{
+	va_list vl;
+	int i = 0, count = 0, flag = 0;
 
 	if (format)
 	{
-		va_start(list, format);
-		for (i = 0; format[i] != '\0'; i++)
+		va_start(vl, format);
+		for (; format[i] != '\0'; i++)
 		{
-			if (flag)
+			if (!flag)
 			{
 				if (format[i] != '%')
-				count += _putchar(format[i]);
+					count += _putchar(format[i]);
 				else
 					flag = 1;
 			}
 			else
 			{
-					switch (format[i])
-					{
-					case 's':
-					count += print_str(va_arg(list, char *));
-						break;
-					case 'c':
-					count += _putchar(va_arg(list, int));
-						break;
-					case '%':
-						count += _putchar('%');
+				switch (format[i])
+				{
+				case 'c':
+					count += _putchar(va_arg(vl, int));
 					break;
-					default:
-						count += _putchar(format[i]);
-					}
-
+				case 's':
+					count += print_str(va_arg(vl, char *));
+					break;
+				case '%':
+					count += _putchar('%');
+					break;
+				case 'd':
+					count += print_int(va_arg(vl, int));
+					break;
+				case 'i':
+					count += print_int(va_arg(vl, int));
+					break;
+				case '\0':
+					return (-1);
+				default:
+					count += _putchar('%');
+					count += _putchar(format[i]);
+				}
+				flag = 0;
 			}
 		}
-		va_end(list);
+		va_end(vl);
 	}
 	else
 	{
 		return (-1);
 	}
-return (count);
+	return (count);
 }
