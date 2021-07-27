@@ -13,7 +13,8 @@ int _printf(const char *format, ...)
 	{
 		va_start(lista, format);
 		if (lista == NULL)
-		return (-1);
+			if (format == NULL || (format[0] == '%' && format[i] == '\0'))
+				return (-1);
 		for (; format[i] != '\0'; i++)
 		{
 			if (!flag)
@@ -44,6 +45,7 @@ int _printf(const char *format, ...)
 				case '\0':
 				case ' ':
 					return (-1);
+					break;
 				default:
 					cont += _putchar('%');
 					cont += _putchar(format[i]);
