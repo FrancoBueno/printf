@@ -1,6 +1,6 @@
 #include "holberton.h"
 #include <stdarg.h>
-#define BUFSIZE_1024 1024;
+#define BUFSIZE 1024;
 /**
  * _printf - Print in screen text
  * @format: string of characters
