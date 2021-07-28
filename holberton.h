@@ -15,4 +15,5 @@ int print_numbers(long int n);
 int print_oct(unsigned int num);
 int print_unt(unsigned int num);
 int print_hex(unsigned int num);
+int print_hexlow(unsigned int num);
 #endif
