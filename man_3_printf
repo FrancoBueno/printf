@@ -1,7 +1,7 @@
 .TH "" "Linux Programmer's Manual" Manual _printf
 .SH
 NAME
-_printf \- print format
+_printf \- prints
 
 .SH
 SYNOPSIS
