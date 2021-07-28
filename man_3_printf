@@ -20,7 +20,7 @@ EXAMPLE
 To print a string of chars "Hello Javi":
 
 .SAMPLE
- #include "holberton.h"
+#include "holberton.h"
   /**
    * main - main function of program
     * Return: always 0
