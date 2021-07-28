@@ -17,7 +17,7 @@ _printf print the ARGUMENT to standrard output acording to the format specified,
 .SH
 EXAMPLE
 
-To print a phrase "Hello Javi":
+To print a string of chars "Hello Javi":
 
 .SAMPLE
  #include "holberton.h"
@@ -39,3 +39,4 @@ As you can see, the _printf when the format is not specified, takes the input an
 .SH
 AUTHORS
 Franco Bueno and Juan Giménez
+
