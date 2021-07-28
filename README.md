@@ -1,5 +1,7 @@
 # 0x11. C - printf
 >Autors: Franco Bueno and Juan Giménez
+
+
 -This printf´s link [GitHub](https://github.com/FrancoBuenoHolberton/printf).
 -Allowed editors: vi, vim, emacs
 -All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
@@ -17,3 +19,6 @@
 - [x] Task 0 :tada:
 - [x] Task 1 :tada:
 - [x] Task 2 :tada:
+
+### Compilation
+>gcc -Wall -Werror -Wextra -pedantic *.c
