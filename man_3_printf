@@ -1,4 +1,4 @@
-.TH "" "Linux Programmer's Manual" Manual _printf
+.TH "" "Linux or linux-like Programmer's Manual" Manual _printf
 .SH
 NAME
 _printf \- prints
