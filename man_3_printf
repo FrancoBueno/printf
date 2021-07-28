@@ -11,7 +11,7 @@ SYNOPSIS
 .B int _printf(const char *format, ...);
 .SH
 DESCRIPTION
-_printf print ARGUMENT to standrard output acording to the format specified, if not specified, prints ARGUMENT itself as shown below at the example. If wanted, you could add a  "%" to specify the format.
+_printf print the ARGUMENT to standrard output acording to the format specified, if not specified, prints ARGUMENT itself as shown below at the example. If wanted, you could add a  "%" to specify the format.
 .TP
 
 .SH
