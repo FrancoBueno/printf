@@ -1,0 +1,73 @@
+.TH "" "Linux Programmer's Manual" Manual _printf
+.SH
+NAME
+_printf \- print format
+
+.SH
+SYNOPSIS
+.TP
+.B #include "holberton.h"
+.TP
+.B int _printf(const char *format, ...);
+.SH
+DESCRIPTION
+_printf print ARGUMENT to standrard output acording to FORMAT established previously or acroding to the options. If wanted, you could add a  "%" to specify the format.
+.TP
+.B Return Value
+.IP
+If _printf successfuly end
+
+.SH
+FORMAT SPECIFIERS
+.TP
+.B %c
+.IP
+print the argument as a single character
+.TP
+.B %s
+.IP
+print the argument as a string. A sigle character will be considered as a string
+.TP
+.BR %i ", " %d
+.IP
+%d specifies the type of variable as decimal and %i specifies the type as integer. In usage terms, there is no difference in printf() function output while printing a number using %d or %i
+.TP
+.B %b
+.IP
+print the given unsigned integer in binary
+.TP
+.B %R
+.IP
+prints the argument as a string in ROT13
+.TP
+.B %r
+.IP
+prints the argument as a string in reverse
+.TP
+.BR %x ", " %X
+
+
+.SH
+EXAMPLES
+
+To print a phrase "Hello Javi":
+
+.SAMPLE
+ #include "holberton.h"
+  /**
+   * main - main function of program
+    * Return: always 0
+     */
+      int main(void)
+       {
+		_printf("Hello Holberton");
+		 	       return (0);
+			        }
+
+Output: Hello Holberton
+.ESAMPLE
+
+
+.SH
+AUTHORS
+Franco Bueno and Juan Giménez

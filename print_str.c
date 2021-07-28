@@ -15,5 +15,5 @@ int print_str(char *s)
 	if (str == NULL)
 	str = "(null)";
 
-	return (cont);
+	return (contador);
 }
