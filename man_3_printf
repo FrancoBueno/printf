@@ -1,7 +1,7 @@
-.TH "" "Linux Programmer's Manual" Manual _printf
+.TH "" "Linux or linux-like Programmer's Manual" Manual _printf
 .SH
 NAME
-_printf \- print format
+_printf \- prints
 
 .SH
 SYNOPSIS
@@ -11,16 +11,16 @@ SYNOPSIS
 .B int _printf(const char *format, ...);
 .SH
 DESCRIPTION
-_printf print ARGUMENT to standrard output acording to the format specified, if not specified, prints ARGUMENT itself as shown below at the example. If wanted, you could add a  "%" to specify the format.
+_printf print the argument to standrard output acording to the format specified if not specified, prints ARGUMENT itself as shown below at the example. If wanted, you could add a  "%" to specify the format.
 .TP
 
 .SH
 EXAMPLE
 
-To print a phrase "Hello Javi":
+To print a string of chars "Hello Javi":
 
 .SAMPLE
- #include "holberton.h"
+#include "holberton.h"
   /**
    * main - main function of program
     * Return: always 0
@@ -31,11 +31,11 @@ To print a phrase "Hello Javi":
 		 	       return (0);
 			        }
 
-Output: Hello Javi
+Output:Hello Javi
 As you can see, the _printf when the format is not specified, takes the input and prints it just like that.
 .EXAMPLE
 
 
 .SH
-AUTHORS
+AUTHORS:
 Franco Bueno and Juan Giménez
