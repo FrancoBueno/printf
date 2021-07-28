@@ -1,42 +1,80 @@
 #include "holberton.h"
 #include <stdarg.h>
-
+#define BUF_SIZE 1024
 /**
- *_printf - Main function
- *@i:read the string
+ * _printf - Print in screen text
+ * @format: string of characters
+ * Return: num of bytes
  */
 int _printf(const char *format, ...)
 {
-	va_list list;
-	int i;
-	int count = 0;
-	if (format != NULL)
-	for (i = 0; format[i] != '\0'; i++);
-	if (format[i] != '%')
-	count+=	_putchar(format[i]);
-	else
-<<<<<<< HEAD
-	flag = 1;
-	if
-=======
-	      flag = 1;
-	else
->>>>>>> f8bc1ff82004900ae61b62358a8612e22e522e67
-	{
-	va_start (list , format);
-	switch (format[i])
-	{
-	case 's':
-	count += print_str(va_list(va_int , int);
-	 break;
-	case 'c':
-	count += _putchar(va_arg(list , int));
-	 break;
-	case '%':
-	 count += _putchar('%');
-	 break;
-	}
-	flag = 0;
+	va_list lista;
+	int i = 0, cont = 0, flag = 0;
 
-	return(count);
+	if (format)
+	{
+		va_start(lista, format);
+		if (lista == NULL)
+			return (-1);
+		if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+				return (-1);
+
+		for (; format[i] != '\0'; i++)
+		{
+			if (!flag)
+			{
+				if (format[i] != '%')
+					cont += _putchar(format[i]);
+				else
+					flag = 1;
+			}
+			else
+			{
+				switch (format[i])
+				{
+				case 'c':
+					cont += _putchar(va_arg(lista, int));
+					break;
+				case 's':
+					cont += print_str(va_arg(lista, char *));
+					break;
+				case '%':
+					cont += _putchar('%');
+					break;
+				case 'd':
+					cont += print_numbers(va_arg(lista, int));
+					break;
+				case 'i':
+					cont += print_numbers(va_arg(lista, int));
+					break;
+				case '\0':
+				case ' ':
+					return (-1);
+					break;
+				case 'u':
+				  cont += print_unt(va_arg(lista, unsigned int));
+				  break;
+				case 'o':
+				  cont += print_oct(va_arg(lista, unsigned int));
+				  break;
+				case 'x':
+				  cont += print_hex(va_arg(lista, unsigned int));
+				  break;
+				case 'X':
+				  cont += print_hexlow(va_arg(lista, unsigned int));
+				  break;
+				default:
+					cont += _putchar('%');
+					cont += _putchar(format[i]);
+				}
+				flag = 0;
+			}
+		}
+		va_end(lista);
 	}
+	else
+	{
+		return (-1);
+	}
+	return (cont);
+}

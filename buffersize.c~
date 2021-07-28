@@ -1,0 +1,8 @@
+#include "holberton.h"
+#define buffersize 1024
+/**
+ *
+ *
+ */
+int buffersize(char *c)
+	
